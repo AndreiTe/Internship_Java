@@ -10,20 +10,20 @@ public class masiv {
     }
 
     static void myFunc(int a1[], int a2[]) {
-        int sum = 0; int k=0;
+        int sum = 0;
         double rand = Math.random();
-        for (int i = 1; i < a2.length; i++) {
+        for (int i = 0; i < a2.length; i++) {
             sum += a2[i];
         }
-        for (int i = 1; i < a2.length; i++) {
-            if (a2[i - 1] > a2[i]) {
-                int tmp1 = a2[i - 1];
-                a2[i - 1] = a2[i];
-                a2[i] = tmp1;
+        for (int i = 0; i < a2.length-1; i++) {
+            if (a2[i] > a2[i+1]) {
+                int tmp1 = a2[i];
+                a2[i] = a2[i+1];
+                a2[i+1] = tmp1;
 
-                int tmp2 = a1[i - 1];
-                a1[i - 1] = a1[i];
-                a1[i] = tmp2;
+                 tmp1 = a1[i];
+                a1[i] = a1[i+1];
+                a1[i+1] = tmp1;
             }
         }
 
@@ -33,15 +33,10 @@ public class masiv {
             double asd =  (a2[i]*1.000 / sum);
             if (rand <= asd) {
                 System.out.println(a1[i]);
-                k = 1;
                 break;
             }
 
             }
-        if (k == 0){
-            System.out.println("asdasd");
-            System.out.println(a1[a1.length]);
-           // System.out.println(asd);
-        }
+
     }
 }
