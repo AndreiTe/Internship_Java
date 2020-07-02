@@ -9,7 +9,7 @@ public class FristTask {
 
 
         int znacenie[] = {1,2,3};
-        int vesa[] = {1,1,1};
+        int vesa[] = {1,8,10};
         masiv x = new masiv(znacenie, vesa);
         x.myFunc(x.array1, x.array2);
          }
