@@ -45,7 +45,7 @@ public class masiv {
                 break;
             } else if(rand > a2[a2.length-1]*1.0 / sum) {
                 //System.out.println("else "+ a1[a2.length-1]);
-                //logger.info(a1[a2.length-1]);
+                logger.info(a1[a2.length-1]);
                 break;
             }
             }
