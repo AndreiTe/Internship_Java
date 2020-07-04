@@ -1,17 +1,33 @@
-import java.util.ArrayList;
-
-
-import org.apache.log4j.LogManager;
 import org.apache.log4j.PropertyConfigurator;
+
 public class FristTask {
 
     public static void main(String[] args) {
 
+        int znacenie[] = {0,1,2,3};
+        int vesa[] = {1,2,3,4};
+        int test[] = new int[4];
+        Random x = new Random(znacenie, vesa);
+        for (int i = 0; i < 100; i++){
+            int asd = x.myFunc();
+            if (asd == 0) {
+                test[0]+=1;
+            } else
+            if (asd == 1) {
+                test[1]+=1;
+            } else
+            if (asd == 2) {
+                test[2]+=1;
+            } else
+            if (asd == 3) {
+                test[3]+=1;
+            }
 
-        int znacenie[] = {1,2,3};
-        int vesa[] = {1,8,10};
-        masiv x = new masiv(znacenie, vesa);
-        x.myFunc(x.array1, x.array2);
+        }
+        for (int i = 0; i < 4; i++){
+            System.out.println(test[i]);
+        }
+       System.out.print(x.myFunc());
          }
 
 }
