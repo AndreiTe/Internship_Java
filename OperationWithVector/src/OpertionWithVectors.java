@@ -27,9 +27,14 @@ public class OpertionWithVectors {
         sub.y = a.y - b.y;
         return sub;
     }
+
+    public static double MultiplicationVectors(VectorFromCoordinates a, VectorFromCoordinates b){
+        double res =  (a.x * b.x) + (a.y * b.y);
+        return res;
+    }
     public static double AngleBetwenVectors(VectorFromCoordinates a, VectorFromCoordinates b){
         double res = 0;
-        res =   Math.acos(((a.x * b.x) + (a.y * b.y)) / (Math.sqrt(Math.pow(a.x,2) + Math.pow(a.y,2)) * Math.sqrt(Math.pow(b.x,2) + Math.pow(b.y,2)) ));
+        res =   Math.acos(MultiplicationVectors(a, b) / (Math.sqrt(Math.pow(a.x,2) + Math.pow(a.y,2)) * Math.sqrt(Math.pow(b.x,2) + Math.pow(b.y,2)) ));
         res = Math.toDegrees(res);
         return res;
     }
